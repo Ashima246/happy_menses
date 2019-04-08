@@ -1,5 +1,17 @@
 $(() => {
     // console.log(userId)
+    $('#products').hide()
+    $('#home').show()
+$('#home1').click(()=>{
+    $('#products').hide()
+    $('#home').show()
+})
+
+
+    $('#sanitaryproducts').click(()=>{
+        $('#products').show()
+        $('#home').hide()
+    })
     let userId = location.hash.substr(1)
     console.log(userId)
 
