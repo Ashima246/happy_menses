@@ -22,11 +22,18 @@ route.post(
     async (req, res) => {
         let userId = req.body.userId,
             productId = req.body.productId
+            //quantity check 1. add quantity column->2.check if present update quant else create row
         await Cart_Items.create({
             womenDetailId: userId,
             productId: productId
         })
-        res.redirect(`/addtocart/?userId=${userId}`)
+        let cartItems = await Cart_Items.findAll({
+            where: {
+                womenDetailId: userId
+            },
+            include: [Products]
+        })
+        res.send(cartItems)
     }
 )
 
