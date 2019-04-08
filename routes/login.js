@@ -15,7 +15,7 @@ route.post(
                     res.send({success: false})
                 }
                 else{
-                    return res.send({name: row.name, success: true})
+                    return res.send({name: row.name, id: row.id, success: true})
                 }
             })
     })

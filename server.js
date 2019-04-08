@@ -20,6 +20,8 @@ app.get('/happymenses', (req, res) => {
 
 app.use('/signup', require('./routes/signup'))
 app.use('/login', require('./routes/login'))
+app.use('/products', require('./routes/products'))
+app.use('/addtocart', require('./routes/addtocart'))
 
 db.sync({ alter: true })
   .then(() => {

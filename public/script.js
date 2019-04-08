@@ -39,14 +39,15 @@ $(()=>{
             (data) => {
                 if(data.success) {
                     alert(`Welcome ${data.name}`)
-                    location.href += 'happymenses'
+                    location.href += `happymenses#${data.id}`
                     console.log('dsc')
                 } else{
                     alert('username doesnot exist!')
                 }
             }
-
         )
+        
+
     })
 
 })
