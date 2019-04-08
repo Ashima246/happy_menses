@@ -4,7 +4,7 @@ const db = new Sequelize({
     dialect: 'mysql',
     database: 'menses',
     username: 'root',
-    password: 'Ashima@123'
+    password: 'Manish@15'
   })
   const Products = db.define('products', {
     name: {
@@ -65,6 +65,14 @@ const Women_details = db.define('women_details', {
   Products.hasMany(Invoice)
   Invoice.belongsTo(Products)
   
+
+  for(let i=0; i < 15; i++) {
+    Products.create({
+      name: `product ${i+1}`,
+      quantity: 20,
+      price: 2000
+    })
+  }
   
   
 
