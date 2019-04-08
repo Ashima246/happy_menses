@@ -65,14 +65,7 @@ const Women_details = db.define('women_details', {
   Products.hasMany(Invoice)
   Invoice.belongsTo(Products)
   
-  for(let i=0; i<15;i++ )
-  {
-    Products.create({
-      name: `product ${i+1}`,
-      quantity: 20,
-      price: (i+1)*1000,
-    })
-  }
+  
   
 
   module.exports = {

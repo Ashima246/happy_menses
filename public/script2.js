@@ -37,7 +37,7 @@ $('#home1').click(()=>{
                 <div class='productCard'>
                 <h4>${product.name}</h4>
                 <p>${product.price}</p>
-                <button class='addToCart' data-id='${product.id}'>Add To Cart</button>
+                <button class='addToCart' data-id='${product.id}'>Add To Cart 🛒</button>
                 </div>
                 `)
             })
